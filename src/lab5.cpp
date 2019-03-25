@@ -17,7 +17,7 @@ void Student::add_mark(int _mark) {
 }
 
 double Student::student_average() {
-	int sum = 0;
+	double sum = 0;
 	for (int i = 0; i < num; i++) {
 		sum += marks[i];
 	}
@@ -56,7 +56,7 @@ Student * Group::search_student(int id_) {
 }
 
 double Group::group_average() {
-	int sum = 0;
+	double sum = 0;
 	for (int i = 0; i < num; i++) {
 		sum += students[i]->student_average();
 	}
