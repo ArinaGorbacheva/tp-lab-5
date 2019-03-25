@@ -32,12 +32,12 @@ public:
 class Group {
 	friend Deanery;
 private:
-	std::string title;
-	std::vector<Student*> students;
+	string title;
+	vector<Student*> students;
 	Student *head;
 	int num;
 public:
-	Group(std::string title_);
+	Group(string title_);
 	void add_student(Student *student);
 	Student * elect_head();
 	Student * search_student(int id_);
@@ -49,13 +49,13 @@ class Deanery {
 private:
 	vector<Student*> students;
 	vector<Group*> groups;
-	string fileStudents; //name of file about students and groups
+	string fileStudents; 
 	string fileGroups;
 	int num_st;
-	int num_gr; //number of students and groups
+	int num_gr; 
 
-	vector<pair<float, string>> student_stat; //for range students
-	vector<pair<float, string>> group_stat; //for range groups
+	vector<pair<float, string>> student_stat; 
+	vector<pair<float, string>> group_stat; 
 
 public:
 	Deanery(string, string);
@@ -65,7 +65,7 @@ public:
 	void get_statistics(string);
 	void change_group(string, string);
 	void exception_student();
-	void update(string); //update info in file
+	void update(string); 
 	void elect_ghead();
 	void print_info();
 };
